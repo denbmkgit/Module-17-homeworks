@@ -8,7 +8,8 @@ class Task(Base):
 
     __tablename__ = 'tasks'
     # __table_args__ = {'keep_existing': True}     #   БЕЗ этой строки НЕ РАБОТАЕТ  (сохранить то что уже есть)
-    __table_args__ = {'extend_existing':  True}  #  Можно такую строку, тогда  РАБОТАЕТ  (расширить то что уже есть)
+    __table_args__ = {'extend_existing': True}  # Можно такую строку, тогда  РАБОТАЕТ  (расширить то что уже есть)
+
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     content = Column(String)
